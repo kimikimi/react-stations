@@ -15,10 +15,12 @@ export const App = () => {
       <img src={dogUrl} alt="" />
       <br/>
       
-      <button onClick={()=>fetch('https://dog.ceo/api/breeds/image/random')
+      <button className="button"
+      onClick={()=>fetch('https://dog.ceo/api/breeds/image/random')
        .then(response =>{console.log(response);　return response.json();
        })
        .then(data => {console.log(data);setDogUrl(data.message);})}>更新</button>
+       <hr/>
     </div>
   )
 }
