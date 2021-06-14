@@ -14,7 +14,7 @@ export const App = () => {
       <header>Dogアプリ</header>
       <img src={dogUrl} alt="" />
       <br/>
-      <button onClick={()=>setDogUrl("https://images.dog.ceo/breeds/hound-english/n02089973_1132.jpg ")}>更新</button>
+      
       <button onClick={()=>fetch('https://dog.ceo/api/breeds/image/random')
        .then(response =>{console.log(response);　return response.json();
        })
@@ -22,3 +22,4 @@ export const App = () => {
     </div>
   )
 }
+// <button onClick={()=>setDogUrl("https://images.dog.ceo/breeds/hound-english/n02089973_1132.jpg ")}>更新</button>
