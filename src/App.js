@@ -11,7 +11,7 @@ export const App = () => {
   const [dogUrl, setDogUrl] =React.useState("https://images.dog.ceo/breeds/spaniel-brittany/n02101388_6057.jpg");
   return (
     <div>
-      <header>Dogアプリ</header>
+      <header className="menu">Dogアプリ</header>
       <img src={dogUrl} alt="" />
       <br/>
       
