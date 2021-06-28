@@ -6,9 +6,8 @@ import {BreedsSelect} from './BreedsSelect'
 
 export const DogListContainer = (props) =>{
 	const [breeds, setBreeds]=useState();
-
+	const [selectedBreed,setSelectedBreed]=useState("");
 	useEffect(()=>{
-		// console.log("hogehoge");
 		fetch("https://dog.ceo/api/breeds/list/all")
 		.then(response=> response.json())
 		.then(result => {
@@ -20,7 +19,11 @@ export const DogListContainer = (props) =>{
 		<div>
 		hogehoge
 			// <img src={props.url} className="dog-img" alt="ワンちゃんの画像"/>
-			<BreedsSelect breeds={breeds}/>
+			<BreedsSelect breeds={breeds}　
+			change={()=>{
+				setSelectedBreed(document.getElementById( "choice" ).value);
+				console.log("hogehoge3",selectedBreed);} }
+			selected={selectedBreed}/>
 		</div>
 		)
 };

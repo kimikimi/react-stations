@@ -9,10 +9,10 @@ export const BreedsSelect = (props) =>{
 	const listItems = breeds.map((breed)=>
 		<option key={breed} value={breed} text={breed}>{breed}</option>
 		)
-		console.log ({listItems});
+		// console.log ({listItems});
 	return (
 	<div>
-		<select defaultValue={props.selected} onChange={props.change}>
+		<select id="choice" defaultValue={props.selected} onChange={props.change}>
 		<option>Plese select</option>
 		{listItems}
 		</select>
