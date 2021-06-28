@@ -12,10 +12,11 @@ export const BreedsSelect = (props) =>{
 		// console.log ({listItems});
 	return (
 	<div>
-		<select id="choice" defaultValue={props.selected} onChange={props.change}>
+		<select id="choice"  onChange={props.change}>
 		<option>Plese select</option>
 		{listItems}
 		</select>
+		{props.selected}
 	</div>
 	)
 }
