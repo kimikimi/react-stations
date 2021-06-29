@@ -12,7 +12,7 @@ export const BreedsSelect = (props) =>{
 		
 	return (
 	<div>
-		<select id="choice" onChange={props.change}>
+		<select id="choice"　defaultValue={props.selectedBreed} onChange={props.change}>
 		<option>Plese select</option>
 		{listItems}
 		</select>
