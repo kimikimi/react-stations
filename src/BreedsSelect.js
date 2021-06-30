@@ -13,7 +13,7 @@ export const BreedsSelect = (props) =>{
 	return (
 	<div>
 		<select id="choice"　required value={props.selectedBread} onChange={event => props.setBreed(event.target.value)}>
-		<option>Plese select</option>
+		<option value="">Plese select</option>
 		{listItems}
 		</select>
 		{props.selectedBreed}
