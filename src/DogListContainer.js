@@ -20,11 +20,7 @@ export const DogListContainer = (props) =>{
 		<div>
 		hogehoge
 			
-			<BreedsSelect breeds={breeds}　
-			change={()=>{
-				setSelectedBreed(document.getElementById( "choice" ).value);
-				console.log("hogehoge3",selectedBreed);} }
-			selectedBreed={selectedBreed}/>
+			<BreedsSelect breeds={breeds} selectedBreed={selectedBreed} setBreed={setSelectedBreed}/>
 		</div>
 		)
 };
