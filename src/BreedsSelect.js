@@ -10,13 +10,14 @@ export const BreedsSelect = (props) =>{
 		<option key={breed} value={breed} text={breed}>{breed}</option>
 		)
 		
-	return (
-	<div>
-		<select id="choice"　required value={props.selectedBread} onChange={event => props.setBreed(event.target.value)}>
-		<option value="">Plese select</option>
-		{listItems}
-		</select>
-		{props.selectedBreed}
-	</div>
-	)
+	    return (
+        <div>
+            <label>Breeds List</label>
+            <select required value={props.selectedBread} onChange={event => props.setBreed(event.target.value)}>
+                <option value="" className="default">Select</option>
+                {breeds}
+            </select>
+            <button onClick={props.getDogImage}>click</button>
+        </div>
+    )
 }
