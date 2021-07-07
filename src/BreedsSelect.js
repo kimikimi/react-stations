@@ -13,9 +13,9 @@ export const BreedsSelect = (props) =>{
 	    return (
         <div>
             <label>Breeds List</label>
-            <select required value={props.selectedBread} onChange={event => props.setBreed(event.target.value)}>
+            <select required value={props.selectedBreed} onChange={event => props.setBreed(event.target.value)}>
                 <option value="" className="default">Select</option>
-                {breeds}
+                {listItems}
             </select>
             <button onClick={props.getDogImage}>click</button>
         </div>

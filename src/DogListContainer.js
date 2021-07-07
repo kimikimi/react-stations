@@ -6,7 +6,9 @@ import {DogImage} from "./DogImage";
 
 export const DogListContainer = () => {
     const [breeds, setBreeds] = useState([]);
-
+    const [selectedBreed, setSelectedBreed] = useState("");
+    const [dogImageList, setDogImageList] = useState([]);
+    
      useEffect(() => {
         fetch("https://dog.ceo/api/breeds/list/all")
             .then(res => res.json())
@@ -14,9 +16,7 @@ export const DogListContainer = () => {
             .then(list => setBreeds(list));
         }, [])
 
-    const [selectedBreed, setSelectedBreed] = useState("");
 
-    const [dogImageList, setDogImageList] = useState([]);
 
     function getDogImage() {
         if(selectedBreed === "") {
@@ -34,7 +34,7 @@ export const DogListContainer = () => {
 
     return (
         <div className="dogListContainer">
-            <BreedsSelect breeds={breeds} selectedBread={selectedBreed} setBreed={setSelectedBreed} getDogImage={getDogImage}/>
+            <BreedsSelect breeds={breeds} selectedBreed={selectedBreed} setBreed={setSelectedBreed} getDogImage={getDogImage}/>
             <div className="dogImageList">
                 {dogImageList}
             </div>
