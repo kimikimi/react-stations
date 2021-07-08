@@ -11,13 +11,13 @@ export const BreedsSelect = (props) =>{
 		)
 		
 	    return (
-        <div>
+        <div　className="BreedsSelect">
             <label>Breeds List</label>
             <select required value={props.selectedBreed} onChange={event => props.setBreed(event.target.value)}>
                 <option value="" className="default">Select</option>
                 {listItems}
             </select>
-            <button onClick={props.getDogImage}>click</button>
+            <button className="button" onClick={props.getDogImage}>表示</button>
         </div>
     )
 }

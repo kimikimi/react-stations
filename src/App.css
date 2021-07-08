@@ -3,6 +3,7 @@
 	text-align: center;
 	font-size: 20px;
 }
+
 .button{
   appearance: none;
   border: 0;
@@ -12,3 +13,60 @@
   padding: 8px 16px;
   font-size: 16px;
 }
+
+.Description{
+  max-width: 1200px;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.Description .right{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.dogListContainer{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dogListContainer select {
+    border: solid 1px #C4C4C4;
+    height: 30px;
+    width: 300px;
+    font-size: 14px;
+    padding-left: 10px;
+    border-radius: 1px;
+    margin: 0 20px;
+}
+
+.BreedsSelect{
+  text-align: center;
+  margin:30px 0;
+}
+
+.dogImageList{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 90px;
+  /*background-color: #000;*/
+}
+.dogImageList .dogImage{
+  flex-basis: 400px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  
+}
+.dogImageList img{
+  width: 300px;
+  height: 150px;
+  object-fit: cover;
+}
+
